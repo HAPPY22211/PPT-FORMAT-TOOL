@@ -35,7 +35,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
 .privacy-badge { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid #cce6da; border-radius: 999px; background: #f0faf6; color: #126a49; font-size: 11px; font-weight: 800; white-space: nowrap; }
 .privacy-dot { width: 7px; height: 7px; border-radius: 50%; background: #1aa36f; }
 .supported-note { color: var(--muted); font-size: 10px; white-space: nowrap; }
-.dashboard { min-height: 0; display: grid; grid-template-columns: minmax(250px,.72fr) minmax(530px,1.45fr) minmax(360px,1fr); gap: 10px; }
+.dashboard { min-height: 0; display: grid; grid-template-columns: minmax(250px,.68fr) minmax(600px,1.62fr) minmax(360px,.98fr); gap: 10px; }
 .panel { min-height: 0; padding: 14px; border: 1px solid rgba(207,216,229,.95); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
 .input-panel, .format-panel, .result-panel { display: flex; flex-direction: column; }
 .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
@@ -109,19 +109,19 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
 .warning-box { margin-top: 6px; max-height: 48px; overflow: auto; padding: 6px; border-radius: 7px; color: var(--warning); background: #fff9eb; font-size: 8.5px; line-height: 1.4; }
 .typo-panel { min-height: 0; flex: 1 1 auto; margin-top: 9px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 11px; overflow: hidden; }
 .typo-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 9px; border-bottom: 1px solid var(--line); background: var(--surface-soft); }
-.typo-heading strong { font-size: 11px; }
-.typo-heading span { color: var(--muted); font-size: 8.5px; }
-.typo-list { min-height: 0; flex: 1 1 auto; overflow: auto; padding: 5px; scrollbar-width: thin; }
+.typo-heading strong { font-size: 12px; color: var(--text); }
+.typo-heading span { color: var(--muted); font-size: 8px; }
+.typo-list { min-height: 0; flex: 1 1 auto; overflow: auto; padding: 6px; scrollbar-width: thin; }
 .typo-empty { display: grid; min-height: 90px; place-items: center; padding: 10px; color: var(--muted); font-size: 9.5px; text-align: center; }
-.typo-item { display: grid; grid-template-columns: 38px minmax(0,1fr); gap: 6px; padding: 7px; border-bottom: 1px solid #edf0f4; }
+.typo-item { display: block; padding: 8px 9px; border-bottom: 1px solid #edf0f4; }
 .typo-item:last-child { border-bottom: 0; }
-.typo-slide { color: var(--accent); font-size: 9px; font-weight: 900; }
+.typo-location { margin-bottom: 4px; color: var(--accent-2); font-size: 8.6px; font-weight: 800; line-height: 1.35; }
 .typo-content { min-width: 0; }
-.typo-main { display: flex; align-items: baseline; gap: 5px; min-width: 0; }
-.typo-main strong { color: #7a4c0d; font-size: 10px; }
-.typo-main span { overflow: hidden; color: var(--text); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-.typo-suggestion { margin-top: 2px; color: var(--muted); font-size: 8.5px; }
-.typo-source { margin-top: 2px; overflow: hidden; color: #8992a2; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.typo-main { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+.typo-main strong { color: var(--warning); font-size: 9px; white-space: nowrap; }
+.typo-main span { overflow: hidden; color: #374151; font-size: 9.5px; text-overflow: ellipsis; white-space: nowrap; }
+.typo-suggestion { margin-top: 5px; padding: 5px 7px; border-left: 3px solid #1f9d69; border-radius: 5px; background: #eef9f4; color: #0f6b49; font-size: 10.5px; font-weight: 900; line-height: 1.35; }
+.typo-source { margin-top: 4px; overflow: hidden; color: #8992a2; font-size: 7.5px; text-overflow: ellipsis; white-space: nowrap; }
 .hidden { display: none !important; }
 .font-popover { position: fixed; z-index: 1000; max-height: min(420px,calc(100vh - 20px)); overflow: hidden; border: 1px solid #cdd7e6; border-radius: 14px; background: white; box-shadow: 0 22px 64px rgba(20,39,72,.22); }
 .font-popover-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 12px; border-bottom: 1px solid #edf0f5; }
@@ -160,7 +160,28 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
 .auto-size-badge { display:none; position:absolute; inset:1px 1px 1px auto; min-width:48px; place-items:center; border-radius:0 7px 7px 0; background:#eaf2fb; color:var(--accent); font-size:9px; font-weight:900; }
 .size-field.auto .auto-size-badge { display:grid; }
 .size-field.auto input { color:transparent !important; }
-.classify-note { margin-top:7px; padding:6px 8px; border-radius:8px; background:#f3f8f5; color:#396052; font-size:9px; line-height:1.35; }
+.classify-note { margin-top:6px; padding:5px 7px; border-radius:8px; background:#f3f8f5; color:#4d6a60; font-size:8px; line-height:1.3; }
+
+.review-preview { margin-top:8px; flex:0 0 246px; min-height:0; display:flex; flex-direction:column; border:1px solid #dce3ed; border-radius:11px; overflow:hidden; background:#fbfcfe; }
+.review-preview-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:7px 9px; border-bottom:1px solid #e7ebf1; background:#f6f8fb; }
+.review-preview-heading strong { font-size:11.5px; }
+.review-preview-heading span { color:var(--muted); font-size:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.review-preview-body { min-height:0; flex:1 1 auto; display:grid; grid-template-columns:minmax(0,1fr) 158px; gap:8px; padding:8px; }
+.slide-preview-shell { min-width:0; min-height:0; display:grid; place-items:center; }
+.slide-preview-canvas { position:relative; width:100%; max-height:182px; aspect-ratio:16/9; overflow:hidden; border:1px solid #aeb9c8; border-radius:7px; background:white; box-shadow:0 4px 12px rgba(25,43,76,.08); }
+.preview-object { position:absolute; overflow:hidden; border:1px solid rgba(151,160,175,.48); background:rgba(255,255,255,.86); color:#1d2636; line-height:1.12; padding:1px 2px; white-space:pre-wrap; word-break:keep-all; }
+.preview-object.preview-picture { display:grid; place-items:center; background:#edf1f6; color:#8791a1; font-size:7px; }
+.preview-object.preview-cell { background:rgba(250,251,253,.94); }
+.preview-target { position:absolute; z-index:50; border:3px solid #e11919; border-radius:4px; background:rgba(225,25,25,.08); box-shadow:0 0 0 1px rgba(255,255,255,.88) inset, 0 0 9px rgba(225,25,25,.30); pointer-events:none; }
+.preview-target::after { content:"검토"; position:absolute; left:-3px; top:-17px; padding:1px 5px; border-radius:4px 4px 0 0; background:#e11919; color:#fff; font-size:7px; font-weight:900; line-height:14px; }
+.preview-empty { position:absolute; inset:0; display:grid; place-items:center; padding:12px; color:var(--muted); font-size:8.5px; text-align:center; line-height:1.45; }
+.preview-info { min-width:0; display:flex; flex-direction:column; justify-content:center; gap:7px; padding:8px; border-radius:8px; background:#f4f7fb; }
+.preview-info strong { color:var(--danger); font-size:10.5px; line-height:1.35; }
+.preview-info span { color:#0f6b49; font-size:10.5px; font-weight:900; line-height:1.4; word-break:break-word; padding:5px 6px; border-radius:6px; background:#eef9f4; }
+.preview-info small { color:var(--muted); font-size:7.5px; line-height:1.4; }
+.typo-item { width:100%; border:0; background:transparent; text-align:left; cursor:pointer; }
+.typo-item:hover { background:#f4f8fd; }
+.typo-item.active { border-radius:8px; background:#eef5fd; box-shadow:inset 4px 0 0 #2369b8; }
 
 @media (min-width: 1000px) { body { overflow: hidden; } }
 @media (max-width: 1200px) {
@@ -192,7 +213,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   <main class="app-shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">POWERPOINT FONT FORMATTER · WEB v0.19</p>
+        <p class="eyebrow">POWERPOINT FONT FORMATTER · WEB v0.23</p>
         <h1>PowerPoint 문서 양식 자동 변환</h1>
       </div>
       <div class="topbar-meta">
@@ -253,6 +274,13 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
           </div>
           <div class="size-field" id="bodySizeField"><input id="bodySize" type="number" min="1" max="200" step="0.5" value="12" aria-label="본문 글자 크기"><span>pt</span><b class="auto-size-badge">자동</b></div>
         </div>
+        <section class="review-preview" id="reviewPreview">
+          <div class="review-preview-heading"><strong>검토 위치 미리보기</strong><span id="previewStatus">오탈자 목록을 클릭하세요.</span></div>
+          <div class="review-preview-body">
+            <div class="slide-preview-shell"><div class="slide-preview-canvas" id="slidePreviewCanvas"><div class="preview-empty">오탈자 의심 항목을 클릭하면 해당 슬라이드의 위치를 빨간 테두리로 표시합니다.</div></div></div>
+            <div class="preview-info" id="previewInfo"><small>원본 파일은 수정하지 않습니다.<br>웹 화면에서만 검토 위치를 표시합니다.</small></div>
+          </div>
+        </section>
         <p class="classify-note">제목·부제목·본문·표 머리글·표 본문은 분류기호가 아니라 PPT 구조, 위치, 기존 글자 크기, 반복 배치, 표 구조를 종합해 자동 인식합니다. 자동 모드는 원본 크기를 그대로 유지하고, 새 글꼴 때문에 줄 수·틀 크기에 문제가 생기는 경우에만 최소한으로 축소합니다. ■·● 등 기존 기호는 그대로 유지됩니다. 내부에 포함된 최신 Office 첨부파일도 함께 변환합니다.</p>
       </section>
 
@@ -280,7 +308,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
         <section class="typo-panel" id="typoPanel">
           <div class="typo-heading"><strong>오탈자 의심 목록</strong><span id="typoSummary">변환 후 표시됩니다.</span></div>
           <div class="typo-list" id="typoList">
-            <div class="typo-empty">자동 수정하지 않고 검토가 필요한 문구만 표시합니다.</div>
+            <div class="typo-empty">자동 수정하지 않고 원문·권장 표현·정확한 위치만 표시합니다.</div>
           </div>
         </section>
       </section>
@@ -309,6 +337,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
 
   const DRAWING_NS = "http://schemas.openxmlformats.org/drawingml/2006/main";
   const PRESENTATION_NS = "http://schemas.openxmlformats.org/presentationml/2006/main";
+  const REL_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
   const ZIP_LOCAL = 0x04034b50;
   const ZIP_CENTRAL = 0x02014b50;
   const ZIP_EOCD = 0x06054b50;
@@ -477,7 +506,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   }
 
   function replaceOlePackage(originalBytes, newPackageBytes, extractedPackage) {
-    // v0.19: 원본 OLE(CFB) 구조를 유지하면서 Package 스트림만 교체한다.
+    // v0.21: 원본 OLE(CFB) 구조를 유지하면서 Package 스트림만 교체한다.
     // FAT가 109개를 넘는 대형 OLE도 DIFAT 섹터를 자동 확장해 지원한다.
     const extracted=extractedPackage || extractOlePackage(originalBytes);
     if (!extracted) throw new Error("OLE 내부 Package 스트림을 찾지 못했습니다.");
@@ -1243,24 +1272,81 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   }
 
   const COMMON_TYPO_RULES = Object.freeze([
-    { pattern: /삭제적용/g, suggestion: "삭제 적용", issue: "띄어쓰기 의심" },
-    { pattern: /재료비절감/g, suggestion: "재료비 절감", issue: "띄어쓰기 의심" },
-    { pattern: /절감금액/g, suggestion: "절감 금액", issue: "띄어쓰기 의심" },
-    { pattern: /추진내용/g, suggestion: "추진 내용", issue: "띄어쓰기 의심" },
-    { pattern: /추진효과/g, suggestion: "추진 효과", issue: "띄어쓰기 의심" },
-    { pattern: /변경전/g, suggestion: "변경 전", issue: "띄어쓰기 의심" },
-    { pattern: /변경후/g, suggestion: "변경 후", issue: "띄어쓰기 의심" },
-    { pattern: /미달사유/g, suggestion: "미달 사유", issue: "띄어쓰기 의심" },
-    { pattern: /문서양식/g, suggestion: "문서 양식", issue: "띄어쓰기 의심" },
-    { pattern: /자동변환/g, suggestion: "자동 변환", issue: "띄어쓰기 의심" },
-    { pattern: /글자크기/g, suggestion: "글자 크기", issue: "띄어쓰기 의심" },
-    { pattern: /오탈자검증/g, suggestion: "오탈자 검증", issue: "띄어쓰기 의심" },
-    { pattern: /일괄변경/g, suggestion: "일괄 변경", issue: "띄어쓰기 의심" },
-    { pattern: /됬/g, suggestion: "됐", issue: "철자 의심" },
-    { pattern: /되요/g, suggestion: "돼요", issue: "철자 의심" },
-    { pattern: /몇일/g, suggestion: "며칠", issue: "철자 의심" },
-    { pattern: /금새/g, suggestion: "금세", issue: "철자 의심" }
+    // 일반 업무 문서에서 자주 확인되는 붙여쓰기
+    { pattern: /삭제적용/g, suggestion: "삭제 적용", issue: "띄어쓰기 오류" },
+    { pattern: /재료비절감/g, suggestion: "재료비 절감", issue: "띄어쓰기 오류" },
+    { pattern: /절감금액/g, suggestion: "절감 금액", issue: "띄어쓰기 오류" },
+    { pattern: /추진내용/g, suggestion: "추진 내용", issue: "띄어쓰기 오류" },
+    { pattern: /추진효과/g, suggestion: "추진 효과", issue: "띄어쓰기 오류" },
+    { pattern: /변경전/g, suggestion: "변경 전", issue: "띄어쓰기 오류" },
+    { pattern: /변경후/g, suggestion: "변경 후", issue: "띄어쓰기 오류" },
+    { pattern: /미달사유/g, suggestion: "미달 사유", issue: "띄어쓰기 오류" },
+    { pattern: /문서양식/g, suggestion: "문서 양식", issue: "띄어쓰기 오류" },
+    { pattern: /문서오탈자/g, suggestion: "문서 오탈자", issue: "띄어쓰기 오류" },
+    { pattern: /오탈자수정/g, suggestion: "오탈자 수정", issue: "띄어쓰기 오류" },
+    { pattern: /오탈자검증/g, suggestion: "오탈자 검증", issue: "띄어쓰기 오류" },
+    { pattern: /자체검증/g, suggestion: "자체 검증", issue: "띄어쓰기 오류" },
+    { pattern: /자동변환/g, suggestion: "자동 변환", issue: "띄어쓰기 오류" },
+    { pattern: /글자크기/g, suggestion: "글자 크기", issue: "띄어쓰기 오류" },
+    { pattern: /일괄변경/g, suggestion: "일괄 변경", issue: "띄어쓰기 오류" },
+    { pattern: /수정안되는데/g, suggestion: "수정 안 되는데", issue: "띄어쓰기 오류" },
+    { pattern: /안되는데/g, suggestion: "안 되는데", issue: "띄어쓰기 오류" },
+    { pattern: /한번/g, suggestion: "한 번", issue: "띄어쓰기 오류" },
+
+    // 자동차/개발 업무 문서에서 실제로 자주 등장하는 짧은 복합어
+    { pattern: /조립어려움/g, suggestion: "조립 어려움", issue: "띄어쓰기 오류" },
+    { pattern: /탈거어려움/g, suggestion: "탈거 어려움", issue: "띄어쓰기 오류" },
+    { pattern: /가공자국/g, suggestion: "가공 자국", issue: "띄어쓰기 오류" },
+    { pattern: /변형현상/g, suggestion: "변형 현상", issue: "띄어쓰기 오류" },
+    { pattern: /소재전개/g, suggestion: "소재 전개", issue: "띄어쓰기 오류" },
+    { pattern: /금형수정/g, suggestion: "금형 수정", issue: "띄어쓰기 오류" },
+    { pattern: /구조변경/g, suggestion: "구조 변경", issue: "띄어쓰기 오류" },
+    { pattern: /형상변경/g, suggestion: "형상 변경", issue: "띄어쓰기 오류" },
+    { pattern: /사양변경/g, suggestion: "사양 변경", issue: "띄어쓰기 오류" },
+    { pattern: /원인분석/g, suggestion: "원인 분석", issue: "띄어쓰기 오류" },
+    { pattern: /대책수립/g, suggestion: "대책 수립", issue: "띄어쓰기 오류" },
+    { pattern: /품질문제/g, suggestion: "품질 문제", issue: "띄어쓰기 오류" },
+    { pattern: /개선필요/g, suggestion: "개선 필요", issue: "띄어쓰기 오류" },
+    { pattern: /검토필요/g, suggestion: "검토 필요", issue: "띄어쓰기 오류" },
+    { pattern: /확인필요/g, suggestion: "확인 필요", issue: "띄어쓰기 오류" },
+    { pattern: /협의필요/g, suggestion: "협의 필요", issue: "띄어쓰기 오류" },
+    { pattern: /적용필요/g, suggestion: "적용 필요", issue: "띄어쓰기 오류" },
+    { pattern: /수정필요/g, suggestion: "수정 필요", issue: "띄어쓰기 오류" },
+    { pattern: /조치필요/g, suggestion: "조치 필요", issue: "띄어쓰기 오류" },
+
+    // 대표 맞춤법 오류. 자동 수정하지 않고 후보만 표시한다.
+    { pattern: /안되요/g, suggestion: "안 돼요", issue: "맞춤법 오류" },
+    { pattern: /않되/g, suggestion: "안 되", issue: "맞춤법 오류" },
+    { pattern: /됬/g, suggestion: "됐", issue: "맞춤법 오류" },
+    { pattern: /되요/g, suggestion: "돼요", issue: "맞춤법 오류" },
+    { pattern: /몇일/g, suggestion: "며칠", issue: "맞춤법 오류" },
+    { pattern: /금새/g, suggestion: "금세", issue: "맞춤법 오류" },
+    { pattern: /헤봐/g, suggestion: "해봐", issue: "맞춤법 오류" },
+    { pattern: /해봣/g, suggestion: "해봤", issue: "맞춤법 오류" }
   ]);
+
+  // 오프라인 단독 실행을 유지하기 위한 보수적 업무문서 어휘 사전.
+  // 사전에 없는 문장을 억지로 교정하지 않고, 분리가 충분히 확실한 경우만 후보로 올린다.
+  const KOREAN_SEGMENT_WORDS = Object.freeze(new Set([
+    "문서","오탈자","수정","안","되는데","되는","되면","되어","돼요","자체","검증","한","번","해봐","헤봐",
+    "양식","자동","변환","글자","크기","일괄","변경","제목","부제목","본문","표","머리글","도형","파일","첨부","자료",
+    "목적","결과","진행","일정","현황","구분","회의","회의록","작성","작성자","부서","부서명","직급","담당","담당자",
+    "개발","진척","이관","품목","신규","금형","제작","부품","구성도","주관처","협력사","검사구","설비","신뢰성","검사",
+    "공정","감사","양산","관리","고객사","계획","완료","적용","입고","품질","강화","방안","검토","자동화","프로그램",
+    "원본","맞춤","조정","표준화","문단","기본","설정","공백","슬라이드","위치","오류","맞춤법","띄어쓰기","확인","필요",
+    "조립","탈거","어려움","가공","자국","변형","현상","소재","전개","구조","형상","사양","원인","분석","대책","수립",
+    "개선","협의","조치","작업","외관","치수","불량","간섭","발생","찍힘","쓸림","유격","들뜸","소음","마찰","방향",
+    "내측","외측","상단","하단","좌측","우측","전면","후면","상부","하부","초도","검사","공정","공법","조건","전수"
+  ]));
+
+  // 이미 하나의 정상 업무용 표현으로 널리 쓰이는 단어는 자동 분리하지 않는다.
+  const KOREAN_NO_SPLIT_WORDS = Object.freeze(new Set([
+    "담당자","작성자","부서명","고객사","협력사","검사구","회의록","구성도","자동화","프로그램","슬라이드",
+    "오탈자","맞춤법","띄어쓰기","재료비","추진내용","추진효과","미달사유","개발팀","품질팀","생기팀","설계팀",
+    "부품검사","공정감사","초기유동","양산적용","개발진척","품질강화"
+  ]));
+
+  const ALLOWED_SINGLE_SEGMENTS = Object.freeze(new Set(["안","한","번"]));
 
   function maskTechnicalTokens(text) {
     return String(text || "")
@@ -1270,72 +1356,119 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
       .replace(/\b\d+(?:\.\d+)?(?:EA|MY|KG|G|MM|CM|M|%|원|천원)\b/gi, " ");
   }
 
+  function segmentHangulCompound(token) {
+    const source=String(token||"");
+    if (source.length<4 || source.length>80) return null;
+    if (KOREAN_NO_SPLIT_WORDS.has(source) || KOREAN_SEGMENT_WORDS.has(source)) return null;
+    const n=source.length;
+    const dp=Array(n+1).fill(null);
+    dp[0]={score:0,parts:[]};
+    for (let i=0;i<n;i+=1) {
+      if (!dp[i]) continue;
+      const max=Math.min(n,i+8);
+      for (let j=i+1;j<=max;j+=1) {
+        const word=source.slice(i,j);
+        if (!KOREAN_SEGMENT_WORDS.has(word)) continue;
+        if (word.length===1 && !ALLOWED_SINGLE_SEGMENTS.has(word)) continue;
+        const partPenalty=dp[i].parts.length*1.2;
+        const score=dp[i].score+(word.length*word.length)+3-partPenalty;
+        if (!dp[j] || score>dp[j].score) dp[j]={score,parts:[...dp[i].parts,word]};
+      }
+    }
+    const result=dp[n];
+    if (!result || result.parts.length<2 || result.parts.length>12) return null;
+    if (result.parts.join("")!==source) return null;
+    const longParts=result.parts.filter((item)=>item.length>=2).length;
+    if (longParts<2) return null;
+    const oneCharCount=result.parts.filter((item)=>item.length===1).length;
+    if (oneCharCount>(result.parts.length>=7?3:2)) return null;
+    return result.parts.join(" ");
+  }
+
+  function buildLocationText(sourceContext, slideNumber, localLocation) {
+    const chain=sourceContext && Array.isArray(sourceContext.chain) ? sourceContext.chain : [];
+    const parts=[];
+    for (let i=0;i<chain.length;i+=1) {
+      const item=chain[i]||{};
+      const slideLabel=i===0?`슬라이드 ${item.slide||"?"}`:`내부 슬라이드 ${item.slide||"?"}`;
+      const attachment=item.objectName||item.embeddingName||`첨부 ${i+1}`;
+      const fileHint=item.embeddingName && item.embeddingName!==attachment ? ` [${item.embeddingName}]` : "";
+      parts.push(`${slideLabel} · 첨부 '${attachment}'${fileHint}${item.position?` · ${item.position}`:""}`);
+    }
+    parts.push(`${chain.length?"내부 ":""}슬라이드 ${slideNumber}${localLocation?` · ${localLocation}`:""}`);
+    return parts.join(" → ");
+  }
+
   function addTypoCandidate(stats, candidate) {
-    if (stats.typoCandidates.length >= 300) {
+    if (stats.typoCandidates.length >= 500) {
       stats.typoCandidatesTruncated = true;
       return;
     }
-    const key = `${candidate.slide}|${candidate.issue}|${candidate.matched}|${candidate.text}`;
+    const key = `${candidate.locationText||candidate.slide}|${candidate.issue}|${candidate.matched}|${candidate.suggestion}|${candidate.text}`;
     if (stats.typoCandidateKeys.has(key)) return;
     stats.typoCandidateKeys.add(key);
     stats.typoCandidates.push(candidate);
   }
 
-  function analyzeTypos(text, slideNumber, stats) {
+  function analyzeTypos(text, slideNumber, stats, localLocation="", sourceContext=null, previewTarget=null) {
     const source = String(text || "").trim();
     if (!source) return;
     const masked = maskTechnicalTokens(source);
+    const locationText=buildLocationText(sourceContext,slideNumber,localLocation);
+    const push=(issue,matched,suggestion)=>addTypoCandidate(stats,{slide:slideNumber,issue,matched,suggestion,text:source,localLocation,sourceContext,locationText,previewTarget});
+
+    const coveredByIssue=new Map();
+    const markCovered=(issue,a,b)=>coveredByIssue.set(issue,[...(coveredByIssue.get(issue)||[]),[a,b]]);
+    const isCovered=(issue,a,b)=>(coveredByIssue.get(issue)||[]).some(([x,y])=>a>=x && b<=y);
+
+    // 숫자+시+방향 형태를 먼저 처리한다. 예: 11시방향쓸림 -> 11시 방향 쓸림
+    const directionPattern=/(\d{1,2})시방향(쓸림|간섭|찍힘|변형|소음|유격|들뜸|마찰)?/g;
+    let directionMatch;
+    while ((directionMatch=directionPattern.exec(masked))) {
+      const suffix=directionMatch[2]?` ${directionMatch[2]}`:"";
+      push("띄어쓰기 오류",directionMatch[0],`${directionMatch[1]}시 방향${suffix}`);
+      markCovered("띄어쓰기 오류",directionMatch.index,directionMatch.index+directionMatch[0].length);
+    }
+
+    // 긴 문장뿐 아니라 4~9자의 짧은 업무 복합어도 분리한다.
+    const hangulToken=/[가-힣]{4,80}/g;
+    let tokenMatch;
+    while ((tokenMatch=hangulToken.exec(masked))) {
+      if (isCovered("띄어쓰기 오류",tokenMatch.index,tokenMatch.index+tokenMatch[0].length)) continue;
+      const segmented=segmentHangulCompound(tokenMatch[0]);
+      if (segmented && segmented!==tokenMatch[0]) {
+        push("띄어쓰기 오류",tokenMatch[0],segmented);
+        markCovered("띄어쓰기 오류",tokenMatch.index,tokenMatch.index+tokenMatch[0].length);
+      }
+    }
 
     for (const rule of COMMON_TYPO_RULES) {
       rule.pattern.lastIndex = 0;
       let match;
       while ((match = rule.pattern.exec(masked))) {
-        addTypoCandidate(stats, {
-          slide: slideNumber,
-          issue: rule.issue,
-          matched: match[0],
-          suggestion: rule.suggestion,
-          text: source
-        });
+        const range=[match.index,match.index+match[0].length];
+        if (isCovered(rule.issue,range[0],range[1])) {
+          if (!rule.pattern.global) break;
+          continue;
+        }
+        const suggestion=typeof rule.suggestion==="function"?rule.suggestion(match):rule.suggestion;
+        push(rule.issue,match[0],suggestion);
+        markCovered(rule.issue,range[0],range[1]);
         if (!rule.pattern.global) break;
       }
     }
 
     const repeatedSpace = /(\S+) {2,}(\S+)/g;
     let spaceMatch;
-    while ((spaceMatch = repeatedSpace.exec(source))) {
-      addTypoCandidate(stats, {
-        slide: slideNumber,
-        issue: "연속 공백 의심",
-        matched: spaceMatch[0],
-        suggestion: `${spaceMatch[1]} ${spaceMatch[2]}`,
-        text: source
-      });
-    }
+    while ((spaceMatch = repeatedSpace.exec(source))) push("연속 공백 오류",spaceMatch[0],`${spaceMatch[1]} ${spaceMatch[2]}`);
 
     const beforePunctuation = /\s+([,.;:!?])/g;
     let punctuationMatch;
-    while ((punctuationMatch = beforePunctuation.exec(source))) {
-      addTypoCandidate(stats, {
-        slide: slideNumber,
-        issue: "문장부호 앞 공백",
-        matched: punctuationMatch[0],
-        suggestion: punctuationMatch[1],
-        text: source
-      });
-    }
+    while ((punctuationMatch = beforePunctuation.exec(source))) push("문장부호 앞 공백",punctuationMatch[0],punctuationMatch[1]);
 
     const duplicateWord = /(^|\s)([가-힣]{2,})(?:\s+\2)(?=\s|$)/g;
     let duplicateMatch;
-    while ((duplicateMatch = duplicateWord.exec(source))) {
-      addTypoCandidate(stats, {
-        slide: slideNumber,
-        issue: "단어 중복 의심",
-        matched: duplicateMatch[0].trim(),
-        suggestion: duplicateMatch[2],
-        text: source
-      });
-    }
+    while ((duplicateMatch = duplicateWord.exec(source))) push("단어 중복 오류",duplicateMatch[0].trim(),duplicateMatch[2]);
   }
 
 
@@ -1354,6 +1487,145 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   function firstDescendantNS(parent, namespaceURI, localName) {
     if (!parent || !parent.getElementsByTagNameNS) return null;
     return parent.getElementsByTagNameNS(namespaceURI, localName)[0] || null;
+  }
+
+
+  function childElementsByNS(parent, namespaceURI, localName) {
+    if (!parent) return [];
+    return Array.from(parent.childNodes||[]).filter((node)=>node && node.nodeType===1 && node.namespaceURI===namespaceURI && node.localName===localName);
+  }
+
+  function objectDisplayName(element, fallback="개체") {
+    if (!element) return fallback;
+    const cNvPr=firstDescendantNS(element,PRESENTATION_NS,"cNvPr");
+    return cNvPr && cNvPr.getAttribute("name") ? cNvPr.getAttribute("name") : fallback;
+  }
+
+  function positionLabelForElement(element, slideSize) {
+    if (!element || !slideSize) return "";
+    const off=firstDescendantNS(element,DRAWING_NS,"off");
+    if (!off) return "";
+    const x=Number(off.getAttribute("x")), y=Number(off.getAttribute("y"));
+    const cx=Number(slideSize.cx)||1, cy=Number(slideSize.cy)||1;
+    if (!Number.isFinite(x)||!Number.isFinite(y)) return "";
+    const xr=x/cx, yr=y/cy;
+    const h=xr<0.34?"좌측":xr<0.67?"중앙":"우측";
+    const v=yr<0.34?"상단":yr<0.67?"중앙":"하단";
+    return `${v} ${h}`;
+  }
+
+  function transformBoundsForElement(element) {
+    if (!element) return null;
+    const xfrm=firstDescendantNS(element,DRAWING_NS,"xfrm") || firstDescendantNS(element,PRESENTATION_NS,"xfrm");
+    const off=xfrm?firstDescendantNS(xfrm,DRAWING_NS,"off"):null;
+    const ext=xfrm?firstDescendantNS(xfrm,DRAWING_NS,"ext"):null;
+    if (!off||!ext) return null;
+    const x=Number(off.getAttribute("x")), y=Number(off.getAttribute("y")), cx=Number(ext.getAttribute("cx")), cy=Number(ext.getAttribute("cy"));
+    if (![x,y,cx,cy].every(Number.isFinite)) return null;
+    return {x,y,cx,cy};
+  }
+
+  function paragraphPreviewTarget(paragraph, paragraphIndex) {
+    const tc=ancestorByNamespace(paragraph,DRAWING_NS,"tc");
+    if (tc) {
+      const tr=ancestorByNamespace(tc,DRAWING_NS,"tr");
+      const tbl=ancestorByNamespace(tc,DRAWING_NS,"tbl");
+      const frame=ancestorByNamespace(tbl,PRESENTATION_NS,"graphicFrame");
+      const frameBounds=transformBoundsForElement(frame);
+      if (tbl && tr && frameBounds) {
+        const grid=firstChildByLocalName(tbl,"tblGrid");
+        const widths=grid?getChildrenByLocalName(grid,"gridCol").map((col)=>Number(col.getAttribute("w"))||0):[];
+        const rows=getChildrenByLocalName(tbl,"tr");
+        const rowHeights=rows.map((row)=>Number(row.getAttribute("h"))||0);
+        const rowIndex=Math.max(0,rows.indexOf(tr));
+        const cells=getChildrenByLocalName(tr,"tc");
+        const usesMergePlaceholders=widths.length && cells.length>=widths.length;
+        let columnIndex=0;
+        for (const cell of cells) {
+          const span=Math.max(1,Number(cell.getAttribute("gridSpan"))||1);
+          if (cell===tc) {
+            const rowSpan=Math.max(1,Number(cell.getAttribute("rowSpan"))||1);
+            const localX=widths.slice(0,columnIndex).reduce((a,b)=>a+b,0);
+            const localY=rowHeights.slice(0,rowIndex).reduce((a,b)=>a+b,0);
+            const localCx=widths.length?widths.slice(columnIndex,columnIndex+span).reduce((a,b)=>a+b,0):frameBounds.cx;
+            const localCy=rowHeights.slice(rowIndex,rowIndex+rowSpan).reduce((a,b)=>a+b,0)||frameBounds.cy/Math.max(1,rows.length);
+            const totalW=widths.reduce((a,b)=>a+b,0)||frameBounds.cx;
+            const totalH=rowHeights.reduce((a,b)=>a+b,0)||frameBounds.cy;
+            return {kind:"tableCell",x:frameBounds.x+frameBounds.cx*(localX/totalW),y:frameBounds.y+frameBounds.cy*(localY/totalH),cx:frameBounds.cx*(localCx/totalW),cy:frameBounds.cy*(localCy/totalH),row:rowIndex+1,col:columnIndex+1,objectName:objectDisplayName(frame,"표")};
+          }
+          columnIndex += usesMergePlaceholders ? 1 : span;
+        }
+      }
+    }
+    const shape=ancestorByNamespace(paragraph,PRESENTATION_NS,"sp");
+    if (shape) {
+      const b=transformBoundsForElement(shape);
+      if (b) return {kind:"shape",...b,objectName:objectDisplayName(shape,"텍스트 상자")};
+    }
+    return {kind:"paragraph",paragraphIndex:Number(paragraphIndex)||0};
+  }
+
+  function describeParagraphLocation(paragraph, paragraphIndex, slideSize) {
+    const tc=ancestorByNamespace(paragraph,DRAWING_NS,"tc");
+    if (tc) {
+      const tr=ancestorByNamespace(tc,DRAWING_NS,"tr");
+      const tbl=ancestorByNamespace(tc,DRAWING_NS,"tbl");
+      const rows=tbl?childElementsByNS(tbl,DRAWING_NS,"tr"):[];
+      const cells=tr?childElementsByNS(tr,DRAWING_NS,"tc"):[];
+      const row=Math.max(1,rows.indexOf(tr)+1), col=Math.max(1,cells.indexOf(tc)+1);
+      const frame=ancestorByNamespace(tbl,PRESENTATION_NS,"graphicFrame");
+      const name=objectDisplayName(frame,"표");
+      const pos=positionLabelForElement(frame,slideSize);
+      return `표 '${name}' · ${row}행 ${col}열${pos?` · ${pos}`:""}`;
+    }
+    const shape=ancestorByNamespace(paragraph,PRESENTATION_NS,"sp");
+    if (shape) {
+      const name=objectDisplayName(shape,"텍스트 상자");
+      const pos=positionLabelForElement(shape,slideSize);
+      return `도형 '${name}'${pos?` · ${pos}`:""}`;
+    }
+    return `문단 ${Number(paragraphIndex)+1}`;
+  }
+
+  function normalizePackagePath(basePath,target) {
+    const base=String(basePath||"").split("/"); base.pop();
+    for (const part of String(target||"").replace(/\\/g,"/").split("/")) {
+      if (!part||part===".") continue;
+      if (part==="..") base.pop(); else base.push(part);
+    }
+    return base.join("/");
+  }
+
+  async function buildEmbeddingReferenceMap(entries, slideXmlTexts, runtime, slideSize) {
+    const refs=new Map();
+    const byName=new Map(entries.map((entry)=>[entry.name.toLowerCase(),entry]));
+    for (let i=0;i<slideXmlTexts.length;i+=1) {
+      const slideNo=i+1;
+      const relName=`ppt/slides/_rels/slide${slideNo}.xml.rels`;
+      const relEntry=byName.get(relName.toLowerCase());
+      if (!relEntry) continue;
+      let relText;
+      try { relText=textDecoder.decode(await inflateEntry(relEntry)); } catch (_) { continue; }
+      const relDoc=new runtime.DOMParser().parseFromString(relText,"application/xml");
+      const slideDoc=new runtime.DOMParser().parseFromString(slideXmlTexts[i],"application/xml");
+      const relationships=Array.from(relDoc.getElementsByTagName("Relationship"));
+      for (const rel of relationships) {
+        const target=rel.getAttribute("Target")||"";
+        const resolved=normalizePackagePath(`ppt/slides/slide${slideNo}.xml`,target);
+        if (!/^ppt\/embeddings\//i.test(resolved)) continue;
+        const relId=rel.getAttribute("Id")||"";
+        let objectName="", position="";
+        const oleNodes=Array.from(slideDoc.getElementsByTagNameNS(PRESENTATION_NS,"oleObj"));
+        const ole=oleNodes.find((node)=>node.getAttributeNS(REL_NS,"id")===relId || node.getAttribute("r:id")===relId);
+        if (ole) {
+          const frame=ancestorByNamespace(ole,PRESENTATION_NS,"graphicFrame");
+          objectName=objectDisplayName(frame,ole.getAttribute("name")||"첨부 개체");
+          position=positionLabelForElement(frame,slideSize);
+        }
+        refs.set(resolved.toLowerCase(),{slide:slideNo,objectName:objectName||resolved.split("/").pop(),position,embeddingName:resolved.split("/").pop()});
+      }
+    }
+    return refs;
   }
 
   function paragraphIsBold(paragraph) {
@@ -1696,7 +1968,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
     }
   }
 
-  function processSlideXml(xmlText, config, env, stats, slideNumber = 0, classificationPlan = null) {
+  function processSlideXml(xmlText, config, env, stats, slideNumber = 0, classificationPlan = null, sourceContext = null, slideSize = null) {
     const parser = new env.DOMParser();
     const doc = parser.parseFromString(xmlText, "application/xml");
     const parserErrors = doc.getElementsByTagName("parsererror");
@@ -1729,7 +2001,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
       }
 
       plans.push({
-        paragraph,textNodes,textBody:paragraph.parentNode,text,category,confidence:analyzed.confidence||0,style,
+        paragraph,paragraphIndex,textNodes,textBody:paragraph.parentNode,text,category,confidence:analyzed.confidence||0,style,
         hasVisibleText:Boolean(text.trim()),
         originalSize:style?paragraphOriginalFontSize(paragraph,textNodes):null,
         originalFont:style?paragraphOriginalFont(paragraph,textNodes):null
@@ -1746,7 +2018,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
         if (scaleInfo.scale<0.9999 && plan.hasVisibleText) stats.preScaledParagraphs+=1;
         applyStyle(doc,plan.paragraph,scaledStyle,stats);
       }
-      if (config.typoCheck && plan.hasVisibleText) analyzeTypos(paragraphText(plan.textNodes),slideNumber,stats);
+      if (config.typoCheck && plan.hasVisibleText) analyzeTypos(paragraphText(plan.textNodes),slideNumber,stats,describeParagraphLocation(plan.paragraph,plan.paragraphIndex,slideSize),sourceContext,paragraphPreviewTarget(plan.paragraph,plan.paragraphIndex));
     }
     updateTextBodyInheritedStyles(doc, plans, stats);
     if (config.fitTextToBox !== false) protectSlideObjectSizes(doc,stats,scaleMap);
@@ -2031,11 +2303,12 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
 
     for (let index=0;index<slideEntries.length;index+=1) {
       if (onProgress) onProgress({current:slideEntries.length+index+1,total:slideEntries.length*2,file:slideEntries[index].name,phase:"convert"});
-      const changedXml=processSlideXml(slideXmlTexts[index],config,runtime,stats,index+1,classifications[index]);
+      const changedXml=processSlideXml(slideXmlTexts[index],config,runtime,stats,index+1,classifications[index],options.sourceContext||null,slideSize);
       slideEntries[index].replacementData=textEncoder.encode(changedXml);
       await new Promise((resolve)=>setTimeout(resolve,0));
     }
     const embeddingEntries=entries.filter((entry)=>/^ppt\/embeddings\//i.test(entry.name));
+    const embeddingReferenceMap=await buildEmbeddingReferenceMap(entries,slideXmlTexts,runtime,slideSize);
     stats.embeddedAttachmentsFound=embeddingEntries.length;
     stats.maxEmbeddedDepth=embeddedDepth;
     const attachmentVerificationPlan=new Map();
@@ -2043,7 +2316,10 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
     for (const entry of embeddingEntries) {
       embeddedIndex += 1;
       if (onProgress && embeddedDepth === 0) onProgress({current:embeddedIndex,total:Math.max(1,embeddingEntries.length),file:entry.name,phase:"attachments"});
-      const detail={name:entry.name,kind:"unknown",status:"원본 유지",verified:false,sourceChecksum:"",convertedChecksum:""};
+      const reference=embeddingReferenceMap.get(entry.name.toLowerCase())||{slide:"?",objectName:entry.name.split("/").pop(),position:"",embeddingName:entry.name.split("/").pop()};
+      const parentChain=options.sourceContext&&Array.isArray(options.sourceContext.chain)?options.sourceContext.chain:[];
+      const childSourceContext={chain:[...parentChain,{slide:reference.slide,objectName:reference.objectName,position:reference.position,embeddingName:reference.embeddingName}]};
+      const detail={name:entry.name,kind:"unknown",status:"원본 유지",verified:false,sourceChecksum:"",convertedChecksum:"",outerSlide:reference.slide,objectName:reference.objectName,position:reference.position};
       try {
         // 각 첨부는 반드시 독립 복사본으로 처리한다. 이전 OLE의 FAT/디렉터리 변경이 다음 첨부에 섞이지 않도록 한다.
         const sourceBytes=cloneBytes(await inflateEntry(entry));
@@ -2068,8 +2344,11 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
         detail.sourceChecksum=checksumLabel(payloadBytes);
         let convertedPayload=null;
         if (inspected.kind==="powerpoint") {
-          const child=await convertPresentation(bytesToArrayBuffer(cloneBytes(payloadBytes)),config,runtime,null,{embeddedDepth:embeddedDepth+1});
+          const child=await convertPresentation(bytesToArrayBuffer(cloneBytes(payloadBytes)),config,runtime,null,{embeddedDepth:embeddedDepth+1,sourceContext:childSourceContext});
           convertedPayload=cloneBytes(child.outputBytes);
+          if (config.typoCheck && Array.isArray(child.stats.typoCandidates)) {
+            for (const candidate of child.stats.typoCandidates) addTypoCandidate(stats,candidate);
+          }
           stats.embeddedPowerPointConverted+=1;
           stats.embeddedSlidesConverted+=Number(child.stats.slideCount||0)+Number(child.stats.embeddedSlidesConverted||0);
           stats.embeddedTextRunsChanged+=Number(child.stats.actualTextRunsChanged||0)+Number(child.stats.embeddedTextRunsChanged||0);
@@ -2128,7 +2407,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
       if (stats.embeddedAttachmentsSkipped) stats.warnings.push(`내부 첨부파일 ${stats.embeddedAttachmentsFound}개 중 ${converted}개를 변환했고 ${stats.embeddedAttachmentsSkipped}개는 미지원 형식이라 원본을 유지했습니다.`);
     }
     delete stats.typoCandidateKeys;
-    if (stats.typoCandidatesTruncated) stats.warnings.push("오탈자 의심 항목이 300건을 초과해 화면에는 처음 300건만 표시합니다.");
+    if (stats.typoCandidatesTruncated) stats.warnings.push("오탈자 의심 항목이 500건을 초과해 화면에는 처음 500건만 표시합니다.");
     if (onProgress && embeddedDepth === 0) onProgress({current:1,total:1,file:"",phase:"package"});
     const outputBytes = await buildZipCompact(entries);
     if (embeddingEntries.length) {
@@ -2181,10 +2460,16 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
     convertPptx: convertPresentation,
     processSlideXml,
     parseZip,
+    inflateEntry,
     buildZip,
     buildZipCompact,
     extractOlePackage,
     replaceOlePackage,
+    analyzeTypos,
+    buildLocationText,
+    describeParagraphLocation,
+    segmentLongHangulToken: segmentHangulCompound,
+    segmentHangulCompound,
     crc32,
     validateConfig
   };
@@ -2196,8 +2481,8 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   "use strict";
 
   const $ = (id) => document.getElementById(id);
-  const STORAGE_KEY = "ppt-font-formatter-web-v0.12-settings";
-  const LEGACY_STORAGE_KEYS = ["ppt-font-formatter-web-v0.11-settings", "ppt-font-formatter-web-v0.10-settings", "ppt-font-formatter-web-v0.9-settings", "ppt-font-formatter-web-v0.7-settings", "ppt-font-formatter-web-v0.6-settings", "ppt-font-formatter-web-v0.5-settings", "ppt-font-formatter-web-v0.4-settings", "ppt-font-formatter-web-v0.3-settings", "ppt-font-formatter-web-v0.2-settings"];
+  const STORAGE_KEY = "ppt-font-formatter-web-v0.22-settings";
+  const LEGACY_STORAGE_KEYS = ["ppt-font-formatter-web-v0.21-settings", "ppt-font-formatter-web-v0.20-settings", "ppt-font-formatter-web-v0.19-settings", "ppt-font-formatter-web-v0.18-settings", "ppt-font-formatter-web-v0.17-settings", "ppt-font-formatter-web-v0.16-settings", "ppt-font-formatter-web-v0.15-settings", "ppt-font-formatter-web-v0.14-settings", "ppt-font-formatter-web-v0.13-settings", "ppt-font-formatter-web-v0.12-settings", "ppt-font-formatter-web-v0.11-settings", "ppt-font-formatter-web-v0.10-settings", "ppt-font-formatter-web-v0.9-settings", "ppt-font-formatter-web-v0.7-settings", "ppt-font-formatter-web-v0.6-settings", "ppt-font-formatter-web-v0.5-settings", "ppt-font-formatter-web-v0.4-settings", "ppt-font-formatter-web-v0.3-settings", "ppt-font-formatter-web-v0.2-settings"];
   const MAX_RECENT_FONTS = 8;
   const DEFAULT_FONT_CATALOG = [
     "현대하모니 M", "현대하모니 L", "나눔바른고딕", "나눔고딕", "맑은 고딕",
@@ -2240,6 +2525,9 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   const ruleCounts = $("ruleCounts");
   const typoSummary = $("typoSummary");
   const typoList = $("typoList");
+  const previewStatus = $("previewStatus");
+  const slidePreviewCanvas = $("slidePreviewCanvas");
+  const previewInfo = $("previewInfo");
   const rulesContainer = $("rulesContainer");
   const fontPickerPopover = $("fontPickerPopover");
   const fontSearch = $("fontSearch");
@@ -2259,6 +2547,10 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   let reportName = "";
   let activeFontInput = null;
   let activeFontCallback = null;
+  let previewRootBuffer = null;
+  let previewCandidates = [];
+  let activePreviewIndex = -1;
+  const previewPackageCache = new Map();
 
   function clone(value) { return JSON.parse(JSON.stringify(value)); }
   function formatBytes(bytes) {
@@ -2591,6 +2883,150 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
     }
   }
 
+  function resetPreview(message="오탈자 의심 항목을 클릭하면 해당 슬라이드의 위치를 빨간 테두리로 표시합니다.") {
+    activePreviewIndex=-1;
+    previewStatus.textContent="오탈자 목록을 클릭하세요.";
+    slidePreviewCanvas.innerHTML=`<div class="preview-empty">${escapeHtml(message)}</div>`;
+    previewInfo.innerHTML='<small>원본 파일은 수정하지 않습니다.<br>웹 화면에서만 검토 위치를 표시합니다.</small>';
+    typoList.querySelectorAll('.typo-item.active').forEach((el)=>el.classList.remove('active'));
+  }
+
+  function bytesToArrayBuffer(bytes) {
+    const copy=new Uint8Array(bytes.length); copy.set(bytes); return copy.buffer;
+  }
+
+  async function resolvePreviewPackage(candidate) {
+    if (!previewRootBuffer) throw new Error("원본 미리보기 데이터가 없습니다.");
+    let current=previewRootBuffer;
+    let cacheKey="root";
+    const chain=candidate && candidate.sourceContext && Array.isArray(candidate.sourceContext.chain)?candidate.sourceContext.chain:[];
+    for (const item of chain) {
+      const name=String(item.embeddingName||"").trim();
+      if (!name) continue;
+      cacheKey += `>${name}`;
+      if (previewPackageCache.has(cacheKey)) { current=previewPackageCache.get(cacheKey); continue; }
+      const entries=PptxFormatterCore.parseZip(current);
+      const entry=entries.find((e)=>e.name.toLowerCase()===`ppt/embeddings/${name}`.toLowerCase()) || entries.find((e)=>e.name.toLowerCase().endsWith(`/`+name.toLowerCase()));
+      if (!entry) throw new Error(`내부 첨부 '${name}'를 찾지 못했습니다.`);
+      const outerBytes=await PptxFormatterCore.inflateEntry(entry);
+      let payload=outerBytes;
+      try {
+        const ole=PptxFormatterCore.extractOlePackage(outerBytes);
+        if (ole && ole.packageBytes) payload=ole.packageBytes;
+      } catch (_) {}
+      current=bytesToArrayBuffer(payload);
+      previewPackageCache.set(cacheKey,current);
+    }
+    return current;
+  }
+
+  function xmlFirstTransform(element, drawingNs="http://schemas.openxmlformats.org/drawingml/2006/main") {
+    if (!element) return null;
+    const xfrms=element.getElementsByTagNameNS(drawingNs,"xfrm");
+    const pxfrms=element.getElementsByTagNameNS("http://schemas.openxmlformats.org/presentationml/2006/main","xfrm");
+    const xfrm=(xfrms&&xfrms[0])||(pxfrms&&pxfrms[0]); if (!xfrm) return null;
+    const off=xfrm.getElementsByTagNameNS(drawingNs,"off")[0];
+    const ext=xfrm.getElementsByTagNameNS(drawingNs,"ext")[0];
+    if (!off||!ext) return null;
+    const vals=["x","y"].map((k)=>Number(off.getAttribute(k))).concat(["cx","cy"].map((k)=>Number(ext.getAttribute(k))));
+    if (!vals.every(Number.isFinite)) return null;
+    return {x:vals[0],y:vals[1],cx:vals[2],cy:vals[3]};
+  }
+
+  function directChildrenLocal(parent, localName) {
+    return Array.from(parent?parent.childNodes:[]).filter((n)=>n&&n.nodeType===1&&n.localName===localName);
+  }
+
+  function previewText(element) {
+    if (!element) return "";
+    const paragraphs=Array.from(element.getElementsByTagNameNS("http://schemas.openxmlformats.org/drawingml/2006/main","p"));
+    if (paragraphs.length) return paragraphs.map((p)=>Array.from(p.getElementsByTagNameNS("http://schemas.openxmlformats.org/drawingml/2006/main","t")).map((t)=>t.textContent||"").join("")).filter(Boolean).join("\n");
+    return Array.from(element.getElementsByTagNameNS("http://schemas.openxmlformats.org/drawingml/2006/main","t")).map((t)=>t.textContent||"").join("");
+  }
+
+  function pct(value,total) { return Math.max(-5,Math.min(105,(Number(value)||0)/(Number(total)||1)*100)); }
+  function previewObjectHtml(bounds, slideSize, text, cls="") {
+    if (!bounds) return "";
+    const left=pct(bounds.x,slideSize.cx), top=pct(bounds.y,slideSize.cy), width=Math.max(.4,pct(bounds.cx,slideSize.cx)), height=Math.max(.4,pct(bounds.cy,slideSize.cy));
+    const fontPx=Math.max(5,Math.min(10,5+height*.08));
+    const clean=String(text||"").replace(/\s+/g," ").trim();
+    return `<div class="preview-object ${cls}" style="left:${left}%;top:${top}%;width:${width}%;height:${height}%;font-size:${fontPx}px" title="${escapeHtml(clean)}">${escapeHtml(clean.slice(0,120))}</div>`;
+  }
+
+  async function buildSlidePreview(packageBuffer, slideNumber, target) {
+    const entries=PptxFormatterCore.parseZip(packageBuffer);
+    const byName=new Map(entries.map((e)=>[e.name.toLowerCase(),e]));
+    let slideSize={cx:12192000,cy:6858000};
+    const presentation=byName.get("ppt/presentation.xml");
+    if (presentation) {
+      const xml=new TextDecoder().decode(await PptxFormatterCore.inflateEntry(presentation));
+      const doc=new DOMParser().parseFromString(xml,"application/xml");
+      const sldSz=doc.getElementsByTagNameNS("http://schemas.openxmlformats.org/presentationml/2006/main","sldSz")[0];
+      if (sldSz) slideSize={cx:Number(sldSz.getAttribute("cx"))||slideSize.cx,cy:Number(sldSz.getAttribute("cy"))||slideSize.cy};
+    }
+    const slideEntry=byName.get(`ppt/slides/slide${Number(slideNumber)||1}.xml`);
+    if (!slideEntry) throw new Error(`슬라이드 ${slideNumber}을 찾지 못했습니다.`);
+    const xml=new TextDecoder().decode(await PptxFormatterCore.inflateEntry(slideEntry));
+    const doc=new DOMParser().parseFromString(xml,"application/xml");
+    const PNS="http://schemas.openxmlformats.org/presentationml/2006/main", ANS="http://schemas.openxmlformats.org/drawingml/2006/main";
+    const parts=[];
+
+    for (const pic of Array.from(doc.getElementsByTagNameNS(PNS,"pic"))) {
+      const b=xmlFirstTransform(pic,ANS); if (b) parts.push(previewObjectHtml(b,slideSize,"이미지","preview-picture"));
+    }
+    for (const sp of Array.from(doc.getElementsByTagNameNS(PNS,"sp"))) {
+      const b=xmlFirstTransform(sp,ANS); if (!b) continue;
+      const text=previewText(sp); if (text.trim()) parts.push(previewObjectHtml(b,slideSize,text,"preview-shape"));
+    }
+    for (const frame of Array.from(doc.getElementsByTagNameNS(PNS,"graphicFrame"))) {
+      const tbl=frame.getElementsByTagNameNS(ANS,"tbl")[0]; if (!tbl) continue;
+      const fb=xmlFirstTransform(frame,ANS); if (!fb) continue;
+      const grid=tbl.getElementsByTagNameNS(ANS,"tblGrid")[0];
+      const widths=grid?directChildrenLocal(grid,"gridCol").map((c)=>Number(c.getAttribute("w"))||0):[];
+      const rows=directChildrenLocal(tbl,"tr");
+      const heights=rows.map((r)=>Number(r.getAttribute("h"))||0);
+      const totalW=widths.reduce((a,b)=>a+b,0)||fb.cx, totalH=heights.reduce((a,b)=>a+b,0)||fb.cy;
+      let yOff=0;
+      rows.forEach((row,rowIndex)=>{
+        const cells=directChildrenLocal(row,"tc"); let colIndex=0;
+        cells.forEach((cell)=>{
+          const span=Math.max(1,Number(cell.getAttribute("gridSpan"))||1);
+          const rowSpan=Math.max(1,Number(cell.getAttribute("rowSpan"))||1);
+          const xOff=widths.slice(0,colIndex).reduce((a,b)=>a+b,0);
+          const cellW=widths.length?widths.slice(colIndex,colIndex+span).reduce((a,b)=>a+b,0):totalW/Math.max(1,cells.length);
+          const cellH=heights.slice(rowIndex,rowIndex+rowSpan).reduce((a,b)=>a+b,0)||heights[rowIndex]||totalH/Math.max(1,rows.length);
+          const b={x:fb.x+fb.cx*xOff/totalW,y:fb.y+fb.cy*yOff/totalH,cx:fb.cx*cellW/totalW,cy:fb.cy*cellH/totalH};
+          parts.push(previewObjectHtml(b,slideSize,previewText(cell),"preview-cell"));
+          colIndex += span;
+        });
+        yOff += heights[rowIndex]||0;
+      });
+    }
+
+    if (target && [target.x,target.y,target.cx,target.cy].every(Number.isFinite)) {
+      parts.push(`<div class="preview-target" style="left:${pct(target.x,slideSize.cx)}%;top:${pct(target.y,slideSize.cy)}%;width:${Math.max(.6,pct(target.cx,slideSize.cx))}%;height:${Math.max(.6,pct(target.cy,slideSize.cy))}%"></div>`);
+    }
+    slidePreviewCanvas.innerHTML=parts.join("")||'<div class="preview-empty">이 슬라이드는 웹 간이 미리보기에서 표시할 수 있는 텍스트/표 개체가 없습니다.</div>';
+  }
+
+  async function showTypoPreview(index) {
+    const item=previewCandidates[index]; if (!item) return;
+    activePreviewIndex=index;
+    typoList.querySelectorAll('.typo-item').forEach((el,i)=>el.classList.toggle('active',i===index));
+    previewStatus.textContent="미리보기 불러오는 중…";
+    previewInfo.innerHTML=`<strong>${escapeHtml(item.issue)} · 의심: ${escapeHtml(item.matched)}</strong><span>권장 표현<br>${escapeHtml(item.suggestion)}</span><small>${escapeHtml(item.locationText||`슬라이드 ${item.slide}`)}</small>`;
+    slidePreviewCanvas.innerHTML='<div class="preview-empty">해당 슬라이드를 불러오고 있습니다.</div>';
+    try {
+      const packageBuffer=await resolvePreviewPackage(item);
+      await buildSlidePreview(packageBuffer,item.slide,item.previewTarget||null);
+      const chain=item.sourceContext&&Array.isArray(item.sourceContext.chain)?item.sourceContext.chain:[];
+      previewStatus.textContent=chain.length?`첨부 내부 슬라이드 ${item.slide}`:`슬라이드 ${item.slide}`;
+    } catch (error) {
+      previewStatus.textContent="미리보기 제한";
+      slidePreviewCanvas.innerHTML=`<div class="preview-empty">${escapeHtml(error&&error.message?error.message:String(error))}<br>위치 정보는 오른쪽에서 확인할 수 있습니다.</div>`;
+    }
+  }
+
   function clearResults() {
     outputBlob = null; reportBlob = null;
     resultCard.classList.add("hidden");
@@ -2598,7 +3034,9 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
     progressWrap.classList.add("hidden");
     progressBar.style.width = "0%";
     typoSummary.textContent = "변환 후 표시됩니다.";
-    typoList.innerHTML = '<div class="typo-empty">자동 수정하지 않고 검토가 필요한 문구만 표시합니다.</div>';
+    typoList.innerHTML = '<div class="typo-empty">자동 수정하지 않고 원문·권장 표현·정확한 위치만 표시합니다.</div>';
+    previewCandidates=[];
+    resetPreview();
   }
   function showError(message) {
     errorCard.textContent = message;
@@ -2607,6 +3045,7 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   }
 
   function setFile(file) {
+    previewRootBuffer=null; previewPackageCache.clear();
     clearResults();
     if (!file) {
       currentFile = null; fileInput.value = "";
@@ -2667,26 +3106,30 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
   }
 
   function renderTypos(stats, enabled) {
+    previewCandidates=[];
+    resetPreview();
     if (!enabled) {
       typoSummary.textContent = "검증 안 함";
       typoList.innerHTML = '<div class="typo-empty">오탈자 검증 옵션이 꺼져 있습니다.</div>';
       return;
     }
     const candidates = stats.typoCandidates || [];
-    typoSummary.textContent = candidates.length ? `${candidates.length}건 · 자동 수정 없음` : "의심 항목 없음";
+    previewCandidates=candidates;
+    typoSummary.textContent = candidates.length ? `${candidates.length}건 · 항목 클릭 시 위치 미리보기` : "의심 항목 없음";
     if (!candidates.length) {
-      typoList.innerHTML = '<div class="typo-empty">규칙 기반 검사에서 확인된 오탈자 의심 항목이 없습니다.</div>';
+      typoList.innerHTML = '<div class="typo-empty">오프라인 검사에서 확인된 오탈자 의심 항목이 없습니다.</div>';
       return;
     }
-    typoList.innerHTML = candidates.map((item) => `
-      <article class="typo-item">
-        <div class="typo-slide">S${item.slide}</div>
+    typoList.innerHTML = candidates.map((item,index) => `
+      <button type="button" class="typo-item" data-typo-index="${index}" title="클릭하여 해당 위치 미리보기">
+        <div class="typo-location">위치: ${escapeHtml(item.locationText||`슬라이드 ${item.slide}`)}</div>
         <div class="typo-content">
-          <div class="typo-main"><strong>${escapeHtml(item.issue)}</strong><span>${escapeHtml(item.matched)}</span></div>
-          <div class="typo-suggestion">권장: ${escapeHtml(item.suggestion)}</div>
-          <div class="typo-source" title="${escapeHtml(item.text)}">${escapeHtml(item.text)}</div>
+          <div class="typo-main"><strong>${escapeHtml(item.issue)}</strong><span>의심: ${escapeHtml(item.matched)}</span></div>
+          <div class="typo-suggestion">권장 표현&nbsp;&nbsp;${escapeHtml(item.suggestion)}</div>
+          <div class="typo-source" title="${escapeHtml(item.text)}">전체 문장: ${escapeHtml(item.text)}</div>
         </div>
-      </article>`).join("");
+      </button>`).join("");
+    typoList.querySelectorAll('[data-typo-index]').forEach((button)=>button.addEventListener('click',()=>showTypoPreview(Number(button.dataset.typoIndex))));
   }
 
 
@@ -2703,6 +3146,8 @@ h1 { font-size: clamp(22px, 2.3vw, 31px); letter-spacing: -.04em; white-space: n
         throw new Error(`구형 .${extension} 파일입니다. PowerPoint에서 최신 형식으로 저장한 후 다시 등록해 주세요.`);
       }
       const inputBuffer=await currentFile.arrayBuffer();
+      previewRootBuffer=inputBuffer.slice(0);
+      previewPackageCache.clear();
       const result = await PptxFormatterCore.convertPresentation(inputBuffer, config, null, ({ current, total, phase }) => {
         if (phase === "analyze") {
           progressBar.style.width = `${Math.max(5, Math.round((current / Math.max(1,total)) * 28))}%`;
